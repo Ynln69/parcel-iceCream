@@ -1,0 +1,21 @@
+@mixin media ($type) {
+  $mobile: $container-width-mobile;
+  $tablet: $container-width-tablet;
+  $desktop: $container-width-desktop;
+
+  @if $type == mobile {
+    @media screen and (min-width: $mobile) {
+      @content;
+    }
+  } @else if $type == tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $type == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else {
+    @error "Unknow type breakpoint #{$type}.";
+  }
+}
