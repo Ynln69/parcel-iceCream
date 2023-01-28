@@ -2,12 +2,15 @@
   padding-top: 12px;
   width: 100%;
   @include media (mobile){
+    width: $container-width-mobile;
     padding-top: 14px;
   }
   @include media (tablet){
+    width: $container-width-tablet;
     padding-top: 20px;
   }
   @include media (desktop){
+    width: $container-width-desktop;
     padding-top: 8px;
   }
 
@@ -51,7 +54,7 @@
     display: none;
     align-items: center;
     gap: 4px;
-    padding: 15px 36px;
+    padding: 12px 36px;
     border-radius: 10px;
     border: none;
     

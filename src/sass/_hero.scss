@@ -1,7 +1,32 @@
 .hero {
-  position: relative;
   padding-top: 50px;
   width: 100%;
+  @include media (mobile) {
+    width: $container-width-mobile;
+    padding-top: 40px;
+  }
+  @include media (tablet) {
+    width: $container-width-tablet;
+    padding-top: 14px;
+  }
+  @include media (desktop) {
+    width: $container-width-desktop;
+    padding-top: 45px;
+  }
+
+  &__container {
+    position: relative;
+    height: 400px;
+    @include media (mobile) {
+      height: 330px;
+    }
+    @include media (tablet) {
+      height: 350px;
+    }
+    @include media (tablet) {
+      height: 520px;
+    }
+  }
 
   &__title {
     margin-bottom: 32px;
@@ -14,6 +39,23 @@
     text-transform: uppercase;
     @include media (mobile) {
       width: 247px;
+    }
+    @include media (tablet) {
+      margin-bottom: 24px;
+    }
+    @include media (desktop) {
+      width: 367px;
+      font-size: 38px;
+      line-height: calc(48/38);
+      margin-bottom: 28px;
+    }
+  }
+
+  &__word {
+    font-size: 34px;
+    line-height: 96.5%;
+    @include media (desktop){
+      font-size: 38px;
     }
   }
   &__btn {
@@ -30,6 +72,10 @@
     font-weight: 600;
     font-size: 12px;
     line-height: calc(15/12);
+
+    @include media (desktop){
+      margin-bottom: 32px;
+    }
     
     &:hover {
       border-color: var(--btn-hover-color);
@@ -42,6 +88,7 @@
   &__button {
     border: none;
     cursor: pointer;
+    z-index: 3;
 
     color: var(--btn-border-color);
     background: rgba(0, 0, 0, 0);
@@ -64,11 +111,17 @@
   }
 
   &__picture {
-    position: relative;
+    position: absolute;
     left: 55%;
     right: 50%;
+    bottom: 0px;
     transform: translate(-50%);
     z-index: 1;
+    @include media (mobile) {
+      left: 75%;
+      bottom: 0px;
+    }
+    
   }
   &__point {
     position: absolute;
@@ -76,5 +129,83 @@
     left: 50%;
     right: 50%;
     transform: translate(-50%);
+    @include media (mobile) {
+      left: 66%;
+    }
+    @include media (tablet) {
+      left: 50%;
+    }
   }
 }
+.hero__thumb {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-count__list {
+  @extend %list;
+  display: none;
+  @include media (tablet){
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: end;
+  }
+}
+.hero-count__number {
+  color: var(--secondary-text-color);
+  font-weight: 900;
+  font-size: 28px;
+  line-height: calc(34/28);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include media (desktop){
+    font-size: 46px;
+    line-height: calc(56/46);
+  }
+}
+.hero-count__desc {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: calc(10/8);
+  @include media (desktop){
+    font-size: 14px;
+    line-height: calc(17/14);
+  }
+}
+.hero-info__container {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-info__icecreams {
+  display: none;
+    @include media (tablet) {
+      display: block;
+      z-index: 2;
+    }
+
+  }
+.hero-info__text {
+  display: none;
+    @include media (tablet){
+      display: block;
+      width: 139px;
+      margin-bottom: 12px;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+    }
+    @include media (tablet){
+      width: 200px; 
+      font-size: 14px;
+    }
+  }
+.hero-info__arrow {
+  display: none;
+    @include media (tablet){
+      display: block;
+      fill: currentColor;
+    }
+  }
