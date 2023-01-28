@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   padding-top: 50px;
+  width: 100%;
 
   &__title {
     margin-bottom: 32px;
@@ -39,7 +40,6 @@
     }
   }
   &__button {
-    padding: 11px 26px;
     border: none;
     cursor: pointer;
 

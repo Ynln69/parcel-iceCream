@@ -3,6 +3,7 @@ body {
   color: var(--main-text-color);
   background-color: var(--main-bodyBg-color);
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1,

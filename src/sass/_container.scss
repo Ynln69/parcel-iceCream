@@ -1,19 +1,16 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding: 0 20px;
-
+  
   @include media (mobile) {
     width: $container-width-mobile;
   }
 
   @include media (tablet) {
     width: $container-width-tablet;
-    padding: 0 32px;
   }
 
   @include media (desktop) {
     width: $container-width-desktop;
-    padding: 0 16px;
   }
 }
