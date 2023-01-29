@@ -1,7 +1,17 @@
 .about {
   width: 100%;
   padding-top: 60px;
+  padding-bottom: 60px;
   text-align: center;
+  @include media (mobile){
+    width: $container-width-mobile;
+  }
+  @include media (tablet){
+    width: $container-width-tablet;
+  }
+  @include media (desktop){
+    width: $container-width-desktop;
+  }
 
   &__subtitle {
     display: block;
@@ -11,6 +21,14 @@
     font-size: 18px;
     line-height: calc(22/18);
     text-transform: uppercase;
+        @include media (tablet){
+          font-size: 22px;
+          line-height: calc(27/22);
+        }
+        @include media (desktop){
+          font-size: 30px;
+          line-height: calc(37/30);
+        }
   }
 
   &__title {
@@ -24,18 +42,45 @@
     line-height: calc(38/30);
     letter-spacing: 0.04em;
     text-transform: uppercase;
+        @include media (tablet){
+          width: 454px;
+          margin-bottom: 72px;
+
+          font-size: 34px;
+          line-height: calc(43/34);
+        }
+        @include media (desktop){
+          width: 481px;
+          margin-bottom: 82px;
+
+          font-size: 36px;
+          line-height: calc(45/36);
+        }
   }
 
   &__text {
+    width: 220px;
     margin-bottom: 4px;
 
     font-weight: 400;
     font-size: 12px;
     line-height: 176%;
     letter-spacing: 0.04em;
+        @include media (tablet){
+          width: 334px;
+          text-align:start;
+        }
+        @include media (desktop){
+          width: 463px;
+          font-size: 16px;
+        }
   }
 
   &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
     padding: 12px 34px;
     margin-top: 24px;
     border-radius: 10px;
@@ -46,12 +91,59 @@
     fill: currentColor;
     font-weight: 600;
     font-size: 14px;
-    line-height: 18px;
+    line-height: calc(18/14);
       &:hover {
         background-color: var(--btn-hover-color);
       }
       &:focus {
         color: var(--btn-focus-color);
       }
+  }
+}
+.about-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 62px;
+      @include media (tablet){
+        flex-direction: row;
+        gap: 38px;
+      }
+      @include media (desktop){
+        align-items: flex-end;
+        gap: 109px;
+      }
+}
+.about-circle {
+  position: relative;
+  top: 10px;
+  width: 279px;
+  height: 279px;
+  background: var(--cow-bg-color);
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  border-radius: 50%;
+      @include media (tablet){
+        width: 330px;
+        height: 330px;
+      }
+      @include media (desktop){
+        width: 490px;
+        height: 490px;
+      }
+
+  &__img {
+    position: absolute;
+    top: 22px;
+    width: 320px;
+    @include media (tablet){
+      width: 330px;
+      height: 330px;
+      top: 26px;
+    }
+    @include media (desktop){
+      width: 490px;
+      height: 490px;
+      top: 39px;
+    }
   }
 }
