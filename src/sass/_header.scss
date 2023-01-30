@@ -54,27 +54,11 @@
     display: none;
     align-items: center;
     gap: 4px;
-    padding: 12px 36px;
-    border-radius: 10px;
-    border: none;
-    
-    fill: currentColor;
-    background-color: var(--icon-bg-color);
-    font-weight: 600;
-    font-size: 14px;
-    line-height: calc(17 / 14);
-    font-family: inherit;
-    cursor: pointer;
+    padding-right: 36px;
+    padding-left: 36px;
+
     @include media (tablet){
       display: flex;
-
-        &:hover {
-          background-color: var(--btn-hover-color);
-        }
-        &:focus {
-          background-color: var(--btn-hover-color);
-          color: var(--btn-focus-color);
-        }
     }
   }
 }

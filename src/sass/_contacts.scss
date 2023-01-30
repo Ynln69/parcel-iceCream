@@ -1,0 +1,163 @@
+.contacts { 
+  width: 100%;
+  padding-bottom: 60px;
+
+      @include media (tablet){
+        width: $container-width-tablet;
+        padding-bottom: 40px;
+      }
+      @include media (desktop){
+        width: $container-width-desktop;
+        padding-bottom: 60px;
+      }
+
+  &__list {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+        @include media (tablet){
+          flex-direction: row;
+          margin-bottom: 40px;
+        }
+        @include media (desktop){
+          gap: 32px;
+          margin-bottom: 60px;
+        }
+  }
+  &__item {
+    width: 280px;
+    height: 412px;
+    padding-top: 40px;
+    padding-right: 32px;
+    padding-bottom: 24px;
+    padding-left: 32px;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    background-color: var(--address-itemBg-color);
+        @include media (tablet){
+          width: 224px;
+          height: 537px;
+        }
+        @include media (desktop){
+          width: 368px;
+          height: 542px;
+          background-color: var(--address-itemBgD-color);
+        }
+  }
+  &__text {
+    @extend %link;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 186%;
+    letter-spacing: 0.04em;
+        @include media (tablet){
+          font-size: 14px;
+        }
+        @include media (desktop){
+          font-size: 16px;
+        }
+  }
+  &__subtitle {
+    display: flex;
+    align-items: center;
+    width: 80px;
+    height: 22px;
+    padding: 4px 22px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+
+    background-color: var(--address-titleBg-color);
+    text-align: center;
+    text-transform: uppercase;
+        @include media (tablet){
+          width: 73px;
+          height: 30px;
+          padding: 4px 13px;
+          margin-bottom: 32px;
+        }
+        @include media (desktop){
+          width: 76px;
+          padding: 4px 14px;
+          margin-bottom: 36px;
+        }
+  }
+  &__town {
+    margin-bottom: 8px;
+    @include media (tablet){
+      margin-bottom: 12px;
+    }
+    @include media (desktop){
+      margin-bottom: 8px;
+    }
+  }
+  &__address {
+    @extend %link;
+    display: block;
+    margin-bottom: 24px;
+
+    color: var(--address-textAd-color);
+        @include media (tablet){
+          margin-bottom: 32px;
+        }
+          &:hover {
+            text-decoration: underline;
+            color: red;
+          }
+  }
+  &__line {
+    margin-bottom: 24px;
+    border: 1px solid var(--address-line-color);
+        @include media (tablet){
+          margin-bottom: 32px;
+        }
+  }
+  &__time { 
+    margin-bottom: 8px;
+
+    color: var(--address-line-color);
+        @include media (desktop){
+          margin-bottom: 12px;
+        }
+  }
+  &__btn {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  &__button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+}
+.subtitle-food {
+  width: 130px;
+      @include media (tablet){
+        width: 138px;
+      }
+      @include media (desktop){
+        width: 148px;
+      }
+}
+.line-second {
+  margin-top: 16px;
+      @include media (tablet){
+        margin-top: 32px;
+      }
+}
+.contacts-button-thumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+        @include media (tablet){
+          flex-direction: row;
+        }
+}

@@ -61,29 +61,13 @@
   &__btn {
     margin-right: 12px;
     margin-bottom: 19px;
-    padding: 11px 26px;
-    border: 2px solid var(--btn-border-color);
-    border-radius: 8px;
-    cursor: pointer;
-
-    color: var(--btn-text-color);
-    background: rgba(0, 0, 0, 0);
-    font-family: inherit;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: calc(15/12);
-
-    @include media (desktop){
-      margin-bottom: 32px;
-    }
-    
-    &:hover {
-      border-color: var(--btn-hover-color);
-    }
-    &:focus {
-      border-color: var(--btn-hover-color);
-      color: var(--btn-focus-color);
-    }
+    padding-right: 26px;
+    padding-left: 26px;
+        @include media (desktop){
+          margin-bottom: 32px;
+          padding-right: 34px;
+          padding-left: 34px;
+        }
   }
   &__button {
     border: none;
