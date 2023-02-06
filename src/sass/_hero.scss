@@ -107,19 +107,6 @@
     }
     
   }
-  &__point {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
-    @include media (mobile) {
-      left: 66%;
-    }
-    @include media (tablet) {
-      left: 50%;
-    }
-  }
 }
 .hero__thumb {
   display: flex;
