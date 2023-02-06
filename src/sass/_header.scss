@@ -39,14 +39,18 @@
       height: 65px;
     }
   }
-
-  &__burger {
+  &__btn-burger {
+    background-color: transparent;
+    border: none;
     fill: var(--burger-menu-color);
     @include media (tablet){
       margin-right: 32px;
     }
     @include media (desktop){
       display: none;
+    }
+    &:hover, &:focus {
+      fill: var(--nav-hover-color);
     }
   }
 

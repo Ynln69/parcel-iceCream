@@ -3,6 +3,9 @@ body {
   color: var(--main-text-color);
   margin: 0;
   overflow-x: hidden;
+      &.modal-open {
+        overflow-y: hidden;
+      }
 }
 
 h1,
