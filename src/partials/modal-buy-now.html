@@ -24,8 +24,37 @@
         <p class="modal-buy-now__text">milkshake</p>
       </li>
     </ul>
-    <form>
-      <button class="button header__btn btn-color" type="submit">Submit</button>
+    <form name="buy-now_form" autocomplete="on" class="modal-buy-now__form">
+      <label for="name">
+        <input
+          id="name"
+          type="text "
+          name="username"
+          placeholder="Name"
+          class="modal-buy-now__lable"
+        />
+      </label>
+      <label for="tell">
+        <input
+          id="tell"
+          type="tel"
+          name="phone_number"
+          placeholder="Phone"
+          class="modal-buy-now__lable"
+        />
+      </label>
+      <textarea
+        name="feedback"
+        rows="3"
+        placeholder="Comment"
+        class="modal-buy-now__lable"
+      ></textarea>
+      <button
+        class="button header__btn btn-color modal-buy-now__button"
+        type="submit"
+      >
+        Submit
+      </button>
     </form>
   </div>
 </div>
