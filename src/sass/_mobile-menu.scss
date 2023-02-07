@@ -39,7 +39,8 @@
     gap: 32px;
     margin-bottom: auto;
   }
-  &__item {
+  &__link {
+    @extend %link;
     font-weight: 700;
     font-size: 32px;
     line-height: calc(39/32);
