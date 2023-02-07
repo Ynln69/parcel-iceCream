@@ -43,3 +43,11 @@
           color: var(--btn-focus-color);
         }
 }
+.close-button-modal {
+  border: none;
+  background-color: transparent;
+  fill: var(--main-text-color);
+    &:hover, &:focus {
+      fill: var(--nav-hover-color);
+    }
+}
