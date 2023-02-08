@@ -1,0 +1,23 @@
+.modal-loc{
+  gap: 24px;
+  @include media (tablet){
+    width: 568px;
+  }
+
+  &__btn {
+    padding-right: 34px;
+    padding-left: 34px;
+  }
+  &__iframe {
+    width: 224px;
+    height: 199px;
+    border-radius: 10px;
+    @include media (tablet){
+      width: 448px;
+      height: 260px;
+    }
+  }
+  &__link {
+    @extend %link;
+  }
+}

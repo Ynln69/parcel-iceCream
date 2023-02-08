@@ -1,4 +1,5 @@
 .modal-buy-now {
+  gap: 40px;
   @include media (tablet) {
     padding: 32px 60px;
     width: 568px;
@@ -13,17 +14,6 @@
 
   &__title {
     margin-bottom: 60px;
-
-    color: var(--secondary-text-color);
-    font-family: 'Seymour One';
-    font-weight: 400;
-    font-size: 16px;
-    line-height: calc(24 / 16);
-
-    @include media (tablet) {
-      font-size: 20px;
-      line-height: calc(28 / 20);
-    }
   }
   &__list {
     display: flex;
