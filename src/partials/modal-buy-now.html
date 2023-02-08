@@ -1,10 +1,6 @@
 <div class="backdrop is-hidden" data-modal-buy-now>
-  <div class="modal-buy-now header-modal">
-    <button
-      type="button"
-      class="modal-buy-now__btn close-button-modal"
-      data-modal-buy-now-close
-    >
+  <div class="modal-buy-now header-modal modals">
+    <button type="button" class="close-button-modal" data-modal-buy-now-close>
       <svg width="20" height="20" class="modal-buy-now__svg">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
@@ -24,14 +20,18 @@
         <p class="modal-buy-now__text">milkshake</p>
       </li>
     </ul>
-    <form name="buy-now_form" autocomplete="on" class="modal-buy-now__form">
+    <form
+      name="buy-now_form"
+      autocomplete="on"
+      class="modal-buy-now__form form"
+    >
       <label for="name">
         <input
           id="name"
           type="text "
           name="username"
           placeholder="Name"
-          class="modal-buy-now__lable"
+          class="modal-buy-now__lable form__lable"
         />
       </label>
       <label for="tell">
@@ -40,17 +40,17 @@
           type="tel"
           name="phone_number"
           placeholder="Phone"
-          class="modal-buy-now__lable"
+          class="modal-buy-now__lable form__lable"
         />
       </label>
       <textarea
         name="feedback"
         rows="3"
         placeholder="Comment"
-        class="modal-buy-now__lable"
+        class="modal-buy-now__lable form__lable"
       ></textarea>
       <button
-        class="button header__btn btn-color modal-buy-now__button"
+        class="button btn-color modal-buy-now__button form__button"
         type="submit"
       >
         Submit

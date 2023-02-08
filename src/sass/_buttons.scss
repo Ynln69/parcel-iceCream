@@ -43,8 +43,16 @@
           color: var(--btn-focus-color);
         }
 }
+
 .close-button-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
+  
   background-color: transparent;
   fill: var(--main-text-color);
     &:hover, &:focus {

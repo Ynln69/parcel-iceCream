@@ -1,33 +1,14 @@
 .modal-buy-now {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 280px;
-  padding: 28px;
-  transition: transform 300ms linear;
-  transform: translate(-50%, -45vh);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  border-radius: 10px;
-  border: 2px solid var(--btn-border-color);
-
-  background-color: var(--main-text-color);
-
   @include media (tablet) {
     padding: 32px 60px;
     width: 568px;
   }
 
-  &__btn {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    top: 12px;
-    right: 12px;
+  &__svg {
     fill: var(--secondary-text-color);
+    &:hover, &:focus {
+      fill: var(--nav-hover-color);
+    }
   }
 
   &__title {
@@ -93,35 +74,6 @@
     line-height: calc(20 / 14);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  &__lable {
-    width: 224px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 16px;
-    border: 1px solid #84A178;
-    border-radius: 10px;
-
-    color: var(--secondary-text-color);
-    background: rgba(248, 210, 78, 0.1);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    resize: none;
-
-    @include media (tablet){
-      width: 368px;
-    }
-  }
-  &__button {
-    width: 121px;
   }
 }
 

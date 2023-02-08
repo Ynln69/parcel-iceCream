@@ -1,0 +1,17 @@
+.modals {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  padding: 28px;
+  transition: transform 300ms linear;
+  transform: translate(-50%, -45vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+  border: 2px solid var(--btn-border-color);
+
+  background-color: var(--main-text-color);
+}
