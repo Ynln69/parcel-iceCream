@@ -7,168 +7,175 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--main-text-color);
-      @include media (tablet){
-        background-image: url(../images/tablet/background-t.png);
-        width: $container-width-tablet;
-      }
-      @include media (desktop){
-        background-image: url(../images/background.png);
-        width: $container-width-desktop;
-      }
+  @include media(tablet) {
+    background-image: url(../images/tablet/background-t.png);
+    width: $container-width-tablet;
+  }
+  @include media(desktop) {
+    background-image: url(../images/background.png);
+    width: $container-width-desktop;
+  }
 
-    &__subtitle {
-      display: block;
+  &__subtitle {
+    display: block;
 
-      color: var(--secondary-text-color);
-      font-weight: 800;
-      font-size: 18px;
-      line-height: calc(22/18);
-      text-transform: uppercase;
-      text-align: center;
+    color: var(--secondary-text-color);
+    font-weight: 800;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 170px;
+
+    color: var(--secondary-text-color);
+    font-family: 'Seymour One';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: calc(38 / 30);
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @include media(desktop) {
+      margin-bottom: 250px;
     }
+  }
 
-    &__title {
-      margin-bottom: 170px;
-
-      color: var(--secondary-text-color);
-      font-family: 'Seymour One';
-      font-weight: 400;
-      font-size: 30px;
-      line-height: calc(38/30);
-      text-align: center;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      @include media (desktop){
-        margin-bottom: 250px;
-      }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 160px;
+    text-align: center;
+    @include media(tablet) {
+      flex-direction: row;
+      gap: 16px;
     }
+  }
 
-    &__list {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 160px;
-      text-align: center;
-          @include media (tablet){
-            flex-direction: row;
-            gap: 16px;
-          }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    min-height: 420px;
+    padding: 16px 40px;
+    border-radius: 24px;
+    background-color: var(--iceCream-bg-color);
+    @include media(mobile) {
+      width: 320px;
+      min-height: 428px;
+      padding: 16px 60px;
     }
+    @include media(tablet) {
+      width: 224px;
+      padding: 12px 26px;
+    }
+    @include media(desktop) {
+      width: 370px;
+      min-height: 536px;
+      padding: 60px 64px;
+    }
+    &.coffee {
+      background-color: var(--iceCoffee-bg-color);
+    }
+    &.milkshake {
+      background-color: var(--milkshakes-bg-color);
+    }
+  }
 
-    &__item {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 280px;
-      min-height: 420px;
-      padding: 16px 40px;
-      border-radius: 24px;
-      background-color: var(--iceCream-bg-color);
-          @include media (mobile){
-            width: 320px;
-            min-height: 428px;
-            padding: 16px 60px;
-          }
-          @include media (tablet){
-            width: 224px;
-            padding: 12px 26px;
-          }
-          @include media (desktop){
-            width: 370px;
-            min-height: 536px;
-            padding: 60px 64px;
-          }
-      &.coffee {
-        background-color: var(--iceCoffee-bg-color);
-      }
-      &.milkshake {
-        background-color: var(--milkshakes-bg-color);
-      }
+  &__circle {
+    position: absolute;
+    margin-bottom: auto;
+    height: 200px;
+    width: 200px;
+    top: 0px;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-60%);
+    @include media(desktop) {
+      height: 302px;
+      width: 302px;
     }
-    
-    &__circle {
+    &::before {
+      content: '';
       position: absolute;
-      margin-bottom: auto;
-      height: 200px;
       width: 200px;
-      top: 0px;
-      left: 50%;
+      height: 200px;
       border-radius: 50%;
-      transform: translateX(-50%) translateY(-60%);
-        @include media (desktop){
-          height: 302px;
-          width: 302px;
-        }
-        &::before {
-          content: '';
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          border-radius: 50%;
-          background-repeat: no-repeat;
-          background-size: cover;
-          left: 50%;
-          top: -4%;
-          transform: translateX(-50%);
-            @include media (tablet) {
-                top: -5%;
-            }
-            @include media (desktop) {
-                width: 302px;
-                height: 302px;
-            }
+      background-repeat: no-repeat;
+      background-size: cover;
+      left: 50%;
+      top: -4%;
+      transform: translateX(-50%);
+      @include media(tablet) {
+        top: -5%;
+      }
+      @include media(desktop) {
+        width: 302px;
+        height: 302px;
       }
     }
+  }
 
-    &__subject {
-      margin-bottom: 40px;
+  &__subject {
+    margin-bottom: 40px;
 
-      color: var(--secondary-text-color);
-      font-weight: 700;
-      font-size: 20px;
-      line-height: calc(24/20);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-          @include media (tablet){
-            font-size: 22px;
-            line-height: calc(27/22);
-          }
-          @include media (desktop){
-            font-size: 30px;
-            line-height: calc(37/30);
-          }
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(24 / 20);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: calc(27 / 22);
     }
-
-    &__text {
-      width: 200px;
-      min-height: 148px;
-      margin-bottom: 50px;
-
-      color: var(--secondary-text-color);
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 176%;
-      letter-spacing: 0.04em;
-          @include media (tablet){
-            width: 172px;
-            min-height: 175px;
-          }
-          @include media (desktop){
-            width: 242px;
-            min-height: 142px;
-            font-size: 16px;
-          }
+    @include media(desktop) {
+      font-size: 30px;
+      line-height: calc(37 / 30);
     }
+  }
 
-    &__button {
-      display: flex; 
-      justify-content: center;
-      background-color: transparent;
-      border: none;
-      margin: auto;
+  &__text {
+    width: 200px;
+    min-height: 148px;
+    margin-bottom: 50px;
+
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 176%;
+    letter-spacing: 0.04em;
+    @include media(tablet) {
+      width: 172px;
+      min-height: 175px;
     }
+    @include media(desktop) {
+      width: 242px;
+      min-height: 142px;
+      font-size: 16px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    &:hover,
+    &:focus {
+      fill: var(--btn-hover-color);
+      transition: all 0.5s;
+      animation: tilt-shaking 0.25s infinite;
+    }
+  }
 }
 .products-content__thumb {
   margin-top: auto;
@@ -176,43 +183,42 @@
 .circle-icecream {
   box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
   background-color: var(--iceCream-imgBg-color);
-      &::before {
-        background-image: url(../images/mobile/iceCreams-m.png); 
+  &::before {
+    background-image: url(../images/mobile/iceCreams-m.png);
 
-        @include media (tablet){
-          background-image: url(../images/tablet/iceCreams-t.png); 
-        }  
-        @include media (desktop){
-          background-image: url(../images/iceCreams.png); 
-        }  
-      }
-    
+    @include media(tablet) {
+      background-image: url(../images/tablet/iceCreams-t.png);
+    }
+    @include media(desktop) {
+      background-image: url(../images/iceCreams.png);
+    }
+  }
 }
 .circle-coffee {
   box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
   background-color: var(--iceCoffee-imgBg-color);
-      &::before {
-        background-image: url(../images/mobile/coffee-m.png); 
+  &::before {
+    background-image: url(../images/mobile/coffee-m.png);
 
-        @include media (tablet){
-          background-image: url(../images/tablet/coffee-t.png); 
-        }  
-        @include media (desktop){
-          background-image: url(../images/coffee.png); 
-        }  
-      }
+    @include media(tablet) {
+      background-image: url(../images/tablet/coffee-t.png);
+    }
+    @include media(desktop) {
+      background-image: url(../images/coffee.png);
+    }
+  }
 }
 .circle-milkshake {
   box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
   background-color: var(--milkshakes-imgBg-color);
-      &::before {
-        background-image: url(../images/mobile/milkshake-m.png); 
+  &::before {
+    background-image: url(../images/mobile/milkshake-m.png);
 
-        @include media (tablet){
-          background-image: url(../images/tablet/milkshakes-t.png); 
-        }  
-        @include media (desktop){
-          background-image: url(../images/milkshake.png); 
-        }  
-      }
+    @include media(tablet) {
+      background-image: url(../images/tablet/milkshakes-t.png);
+    }
+    @include media(desktop) {
+      background-image: url(../images/milkshake.png);
+    }
+  }
 }

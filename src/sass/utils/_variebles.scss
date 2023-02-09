@@ -54,3 +54,22 @@
 $container-width-mobile: 480px;
 $container-width-tablet: 768px;
 $container-width-desktop: 1200px;
+
+// Animation fot bnt products
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
