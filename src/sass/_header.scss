@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  z-index: 10;
   padding-top: 12px;
   width: 100%;
   @include media (mobile){
@@ -65,6 +71,13 @@
       display: flex;
     }
   }
+}
+.header-scroll {
+  box-shadow: 0 5.34219px 20.0332px rgb(10 136 23 / 25%);
+  background-image: linear-gradient(rgba(255,229,80,.737),rgba(156, 190, 143, 0.7));
+  
+  // var(--iceCream-imgBg-color);
+  
 }
 
 .nav__list {

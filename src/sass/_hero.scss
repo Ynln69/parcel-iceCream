@@ -1,18 +1,16 @@
 .hero {
   position: relative;
-  padding-top: 50px;
   width: 100%;
+  padding-top: 80px;
   @include media (mobile) {
     width: $container-width-mobile;
-    padding-top: 40px;
   }
   @include media (tablet) {
     width: $container-width-tablet;
-    padding-top: 14px;
   }
   @include media (desktop) {
     width: $container-width-desktop;
-    padding-top: 45px;
+    padding-top: 110px;
   }
 
   &__container {
@@ -191,4 +189,11 @@
       display: block;
       fill: currentColor;
     }
+}
+.hero-title-1 {
+  display: block;
+  min-height: 68px;
+  @include media (desktop) {
+      min-height: 96px;
+  }
 }
