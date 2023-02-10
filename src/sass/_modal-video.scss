@@ -1,0 +1,24 @@
+.modal-video {
+  @include media(tablet) {
+    width: 568px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include media(tablet) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__iframe {
+    width: 224px;
+    height: 199px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    @include media(tablet) {
+      width: 448px;
+      height: 205px;
+      margin-bottom: 32px;
+    }
+  }
+}
