@@ -7,6 +7,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--main-text-color);
+  @include media(mobile) {
+    width: $container-width-mobile;
+  }
   @include media(tablet) {
     background-image: url(../images/tablet/background-t.png);
     width: $container-width-tablet;
