@@ -1,0 +1,86 @@
+.gallery {
+  position: relative;
+  background-image: url(../images/mobile/background-m.png),
+    linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  min-height: 50px;
+  margin: 0 auto;
+
+  @include media(tablet) {
+    width: $container-width-tablet;
+    min-height: 327px;
+    background-image: url(../images/tablet/background-t.png),
+      linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
+    background-position: unset;
+  }
+  @include media(desktop) {
+    width: $container-width-desktop;
+    min-height: 422px;
+    background-image: url(../images/background.png),
+      linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
+  }
+  &__list {
+    @extend %list;
+  }
+  &__img {
+    max-width: 280px;
+    border-radius: 24px;
+    max-height: 422px;
+    background-size: cover;
+    background-position: 50%;
+    // transform: translateX(-50%) translateY(-50%);
+    // animation: imagesFading 6s infinite;
+
+    @include media(tablet) {
+      max-width: 704px;
+    }
+    @include media(desktop) {
+      max-width: 1013px;
+      margin-left: 80px;
+    }
+  }
+}
+.slick-prev {
+  width: 50px;
+  height: 50px;
+  color: var(--main-bodyBg-color);
+}
+
+.slick-next {
+  width: 50px;
+  height: 50px;
+  color: var(--main-bodyBg-color);
+}
+.slick-prev:before {
+  color: currentColor;
+}
+.slick-next:before {
+  color: currentColor;
+}
+// .first-img {
+//   animation-delay: 4s;
+// }
+
+// .second-img {
+//   animation-delay: 2s;
+// }
+
+// .third-img {
+//   animation-delay: 0s;
+// }
+// @keyframes imagesFading {
+//   0% {
+//     opacity: 1;
+//   }
+//   25% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+//   75% {
+//     opacity: 0;
+//   }
+// }

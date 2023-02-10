@@ -1,15 +1,32 @@
-.contacts { 
+.contacts {
+  position: relative;
   width: 100%;
-  padding-bottom: 60px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0) 25%,
+    var(--main-bodyBg-color) 0
+  );
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  padding-bottom: 30px;
 
-      @include media (tablet){
-        width: $container-width-tablet;
-        padding-bottom: 40px;
-      }
-      @include media (desktop){
-        width: $container-width-desktop;
-        padding-bottom: 60px;
-      }
+  @include media(tablet) {
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 45%,
+      var(--main-bodyBg-color) 0
+    );
+    padding-bottom: 20px;
+    width: $container-width-tablet;
+  }
+  @include media(desktop) {
+    width: $container-width-desktop;
+    background-image: linear-gradient(
+      rgba(0, 0, 0, 0) 18%,
+      var(--main-bodyBg-color) 0
+    );
+    padding-bottom: 60px;
+  }
 
   &__list {
     @extend %list;
@@ -18,14 +35,14 @@
     align-items: center;
     gap: 16px;
     margin-bottom: 24px;
-        @include media (tablet){
-          flex-direction: row;
-          margin-bottom: 40px;
-        }
-        @include media (desktop){
-          gap: 32px;
-          margin-bottom: 60px;
-        }
+    @include media(tablet) {
+      flex-direction: row;
+      margin-bottom: 40px;
+    }
+    @include media(desktop) {
+      gap: 32px;
+      margin-bottom: 60px;
+    }
   }
   &__item {
     width: 280px;
@@ -38,15 +55,15 @@
     border-radius: 24px;
 
     background-color: var(--address-itemBg-color);
-        @include media (tablet){
-          width: 224px;
-          height: 537px;
-        }
-        @include media (desktop){
-          width: 368px;
-          height: 542px;
-          background-color: var(--address-itemBgD-color);
-        }
+    @include media(tablet) {
+      width: 224px;
+      height: 537px;
+    }
+    @include media(desktop) {
+      width: 368px;
+      height: 542px;
+      background-color: var(--address-itemBgD-color);
+    }
   }
   &__text {
     @extend %link;
@@ -55,12 +72,12 @@
     font-size: 12px;
     line-height: 186%;
     letter-spacing: 0.04em;
-        @include media (tablet){
-          font-size: 14px;
-        }
-        @include media (desktop){
-          font-size: 16px;
-        }
+    @include media(tablet) {
+      font-size: 14px;
+    }
+    @include media(desktop) {
+      font-size: 16px;
+    }
   }
   &__subtitle {
     display: flex;
@@ -74,24 +91,24 @@
     background-color: var(--address-titleBg-color);
     text-align: center;
     text-transform: uppercase;
-        @include media (tablet){
-          width: 73px;
-          height: 30px;
-          padding: 4px 13px;
-          margin-bottom: 32px;
-        }
-        @include media (desktop){
-          width: 76px;
-          padding: 4px 14px;
-          margin-bottom: 36px;
-        }
+    @include media(tablet) {
+      width: 73px;
+      height: 30px;
+      padding: 4px 13px;
+      margin-bottom: 32px;
+    }
+    @include media(desktop) {
+      width: 76px;
+      padding: 4px 14px;
+      margin-bottom: 36px;
+    }
   }
   &__town {
     margin-bottom: 8px;
-    @include media (tablet){
+    @include media(tablet) {
       margin-bottom: 12px;
     }
-    @include media (desktop){
+    @include media(desktop) {
       margin-bottom: 8px;
     }
   }
@@ -101,28 +118,28 @@
     margin-bottom: 24px;
 
     color: var(--address-textAd-color);
-        @include media (tablet){
-          margin-bottom: 32px;
-        }
-          &:hover {
-            text-decoration: underline;
-            color: red;
-          }
+    @include media(tablet) {
+      margin-bottom: 32px;
+    }
+    &:hover {
+      text-decoration: underline;
+      color: red;
+    }
   }
   &__line {
     margin-bottom: 24px;
     border: 1px solid var(--address-line-color);
-        @include media (tablet){
-          margin-bottom: 32px;
-        }
+    @include media(tablet) {
+      margin-bottom: 32px;
+    }
   }
-  &__time { 
+  &__time {
     margin-bottom: 8px;
 
     color: var(--address-line-color);
-        @include media (desktop){
-          margin-bottom: 12px;
-        }
+    @include media(desktop) {
+      margin-bottom: 12px;
+    }
   }
   &__btn {
     padding-right: 40px;
@@ -139,25 +156,25 @@
 }
 .subtitle-food {
   width: 130px;
-      @include media (tablet){
-        width: 138px;
-      }
-      @include media (desktop){
-        width: 148px;
-      }
+  @include media(tablet) {
+    width: 138px;
+  }
+  @include media(desktop) {
+    width: 148px;
+  }
 }
 .line-second {
   margin-top: 16px;
-      @include media (tablet){
-        margin-top: 32px;
-      }
+  @include media(tablet) {
+    margin-top: 32px;
+  }
 }
 .contacts-button-thumb {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-        @include media (tablet){
-          flex-direction: row;
-        }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  @include media(tablet) {
+    flex-direction: row;
+  }
 }

@@ -2,13 +2,13 @@
   position: relative;
   width: 100%;
   padding-top: 80px;
-  @include media (mobile) {
+  @include media(mobile) {
     width: $container-width-mobile;
   }
-  @include media (tablet) {
+  @include media(tablet) {
     width: $container-width-tablet;
   }
-  @include media (desktop) {
+  @include media(desktop) {
     width: $container-width-desktop;
     padding-top: 110px;
   }
@@ -16,13 +16,13 @@
   &__container {
     position: relative;
     height: 400px;
-    @include media (mobile) {
+    @include media(mobile) {
       height: 330px;
     }
-    @include media (tablet) {
+    @include media(tablet) {
       height: 350px;
     }
-    @include media (desktop) {
+    @include media(desktop) {
       height: 520px;
     }
   }
@@ -33,19 +33,19 @@
     font-family: 'Seymour One';
     font-weight: 400;
     font-size: 26px;
-    line-height: calc(33/26);
+    line-height: calc(33 / 26);
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    @include media (mobile) {
+    @include media(mobile) {
       width: 247px;
     }
-    @include media (tablet) {
+    @include media(tablet) {
       margin-bottom: 24px;
     }
-    @include media (desktop) {
+    @include media(desktop) {
       width: 367px;
       font-size: 38px;
-      line-height: calc(48/38);
+      line-height: calc(48 / 38);
       margin-bottom: 28px;
     }
   }
@@ -53,11 +53,11 @@
   &__word {
     font-size: 34px;
     line-height: 96.5%;
-    @include media (desktop){
+    @include media(desktop) {
       font-size: 38px;
     }
   }
-  &__link{
+  &__link {
     @extend %link;
   }
   &__btn {
@@ -65,11 +65,11 @@
     margin-bottom: 19px;
     padding-right: 26px;
     padding-left: 26px;
-        @include media (desktop){
-          margin-bottom: 32px;
-          padding-right: 34px;
-          padding-left: 34px;
-        }
+    @include media(desktop) {
+      margin-bottom: 32px;
+      padding-right: 34px;
+      padding-left: 34px;
+    }
   }
   &__button {
     border: none;
@@ -81,9 +81,9 @@
     font-family: inherit;
     font-weight: 600;
     font-size: 12px;
-    line-height: calc(15/12);
+    line-height: calc(15 / 12);
     text-decoration-line: underline;
-    
+
     &:hover {
       color: var(--btn-hover-color);
     }
@@ -103,7 +103,7 @@
     bottom: 0px;
     transform: translate(-50%);
     z-index: 1;
-    @include media (mobile) {
+    @include media(mobile) {
       left: 75%;
       bottom: 0px;
     }
@@ -113,7 +113,7 @@
     position: absolute;
     bottom: 0;
     right: 4px;
-    @include media (mobile) {
+    @include media(mobile) {
       right: 0;
     }
   }
@@ -125,7 +125,7 @@
 .hero-count__list {
   @extend %list;
   display: none;
-  @include media (tablet){
+  @include media(tablet) {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -136,21 +136,21 @@
   color: var(--secondary-text-color);
   font-weight: 900;
   font-size: 28px;
-  line-height: calc(34/28);
+  line-height: calc(34 / 28);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  @include media (desktop){
+  @include media(desktop) {
     font-size: 46px;
-    line-height: calc(56/46);
+    line-height: calc(56 / 46);
   }
 }
 .hero-count__desc {
   font-weight: 400;
   font-size: 8px;
-  line-height: calc(10/8);
-  @include media (desktop){
+  line-height: calc(10 / 8);
+  @include media(desktop) {
     font-size: 14px;
-    line-height: calc(17/14);
+    line-height: calc(17 / 14);
   }
 }
 .hero-info__container {
@@ -161,39 +161,31 @@
 
 .hero-info__icecreams {
   display: none;
-    @include media (tablet) {
-      display: block;
-      z-index: 2;
-    }
-
+  @include media(tablet) {
+    display: block;
+    z-index: 2;
   }
+}
 .hero-info__text {
   display: none;
-    @include media (tablet){
-      display: block;
-      width: 139px;
-      margin-bottom: 12px;
+  @include media(tablet) {
+    display: block;
+    width: 139px;
+    margin-bottom: 12px;
 
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 140%;
-    }
-    @include media (desktop){
-      width: 200px; 
-      font-size: 14px;
-    }
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
   }
+  @include media(desktop) {
+    width: 200px;
+    font-size: 14px;
+  }
+}
 .hero-info__arrow {
   display: none;
-    @include media (tablet){
-      display: block;
-      fill: currentColor;
-    }
-}
-.hero-title-1 {
-  display: block;
-  min-height: 68px;
-  @include media (desktop) {
-      min-height: 96px;
+  @include media(tablet) {
+    display: block;
+    fill: currentColor;
   }
 }

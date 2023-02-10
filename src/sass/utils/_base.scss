@@ -1,11 +1,11 @@
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--main-text-color);
   margin: 0;
   overflow-x: hidden;
-      &.modal-open {
-        overflow-y: hidden;
-      }
+  &.modal-open {
+    overflow-y: hidden;
+  }
 }
 
 h1,
@@ -15,7 +15,8 @@ h4,
 h5,
 h6,
 p,
-ul, li {
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -24,7 +25,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-} 
+}
 
 %list {
   margin: 0;

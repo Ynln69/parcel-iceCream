@@ -3,19 +3,18 @@
   margin-right: auto;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: var(--main-bodyBg-color);
-  
-  @include media (mobile) {
+
+  @include media(mobile) {
     width: $container-width-mobile;
   }
 
-  @include media (tablet) {
+  @include media(tablet) {
     width: $container-width-tablet;
     padding-right: 32px;
     padding-left: 32px;
   }
 
-  @include media (desktop) {
+  @include media(desktop) {
     width: $container-width-desktop;
     padding-right: 16px;
     padding-left: 16px;
