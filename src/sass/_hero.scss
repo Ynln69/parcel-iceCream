@@ -1,32 +1,23 @@
 .hero {
   position: relative;
-  width: 100%;
-  padding-top: 80px;
-  @include media(mobile) {
-    width: $container-width-mobile;
-  }
-  @include media(tablet) {
-    width: $container-width-tablet;
-  }
-  @include media(desktop) {
-    width: $container-width-desktop;
-    padding-top: 110px;
-  }
 
   &__container {
     position: relative;
-    height: 400px;
+    padding-top: 70px;
+    padding-bottom: 175px;
+
     @include media(mobile) {
-      height: 330px;
+      padding-bottom: 110px;
     }
     @include media(tablet) {
-      height: 350px;
+      padding-top: 104px;
+      padding-bottom: 13px;
     }
     @include media(desktop) {
-      height: 520px;
+      padding-top: 118px;
+      padding-bottom: 65px;
     }
   }
-
   &__title {
     margin-bottom: 32px;
 
@@ -49,7 +40,6 @@
       margin-bottom: 28px;
     }
   }
-
   &__word {
     font-size: 34px;
     line-height: 96.5%;
@@ -91,101 +81,141 @@
       color: var(--btn-focus-color);
     }
   }
-
   &__container {
     position: relative;
   }
-
   &__picture {
     position: absolute;
     left: 50%;
     right: 50%;
-    bottom: 0px;
+    bottom: -20px;
     transform: translate(-50%);
     z-index: 1;
+    animation: ice-cream-shadow-spawn 1s ease-in-out 1s forwards,
+      ice-cream-shadow-flash 1s ease-in-out 2s infinite alternate;
     @include media(mobile) {
       left: 75%;
-      bottom: 0px;
     }
-  }
-
-  &__point {
-    position: absolute;
-    bottom: 0;
-    right: 4px;
-    @include media(mobile) {
-      right: 0;
+    @include media(tablet) {
+      bottom: 0;
     }
   }
 }
+
+.container-bgc {
+  background: url(../images/mobile/left-point.png) 0 100%/110px 34px no-repeat,
+    url(../images/mobile/right-point.png) 100% 100%/130px 48px no-repeat;
+  @include media(tablet) {
+    background: url(../images/tablet/left-point.png) 0 100%/110px 34px no-repeat,
+      url(../images/tablet/right-point.png) 100% 100%/130px 48px no-repeat;
+  }
+  @include media(desktop) {
+    background: url(../images/point.png) bottom/1200px 384px no-repeat;
+  }
+}
+
 .hero__thumb {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 42px;
 }
-.hero-count__list {
-  @extend %list;
-  display: none;
-  @include media(tablet) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: end;
+
+.hero-count {
+  &__list {
+    @extend %list;
+    display: none;
+    @include media(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: end;
+    }
+  }
+  &__number {
+    color: var(--secondary-text-color);
+    font-weight: 900;
+    font-size: 28px;
+    line-height: calc(34 / 28);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    @include media(desktop) {
+      font-size: 46px;
+      line-height: calc(56 / 46);
+    }
+  }
+  &__desc {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: calc(10 / 8);
+    @include media(desktop) {
+      font-size: 14px;
+      line-height: calc(17 / 14);
+    }
   }
 }
-.hero-count__number {
-  color: var(--secondary-text-color);
-  font-weight: 900;
-  font-size: 28px;
-  line-height: calc(34 / 28);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  @include media(desktop) {
-    font-size: 46px;
-    line-height: calc(56 / 46);
-  }
-}
-.hero-count__desc {
-  font-weight: 400;
-  font-size: 8px;
-  line-height: calc(10 / 8);
-  @include media(desktop) {
-    font-size: 14px;
-    line-height: calc(17 / 14);
-  }
-}
-.hero-info__container {
+
+.hero-info {
   display: flex;
   align-items: center;
   gap: 32px;
+
+  &__icecreams {
+    display: none;
+    animation: plate-rotate 20s linear infinite;
+    @include media(tablet) {
+      display: block;
+      z-index: 2;
+    }
+  }
+  &__text {
+    display: none;
+    @include media(tablet) {
+      display: block;
+      width: 139px;
+      margin-bottom: 12px;
+
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+    }
+    @include media(desktop) {
+      width: 200px;
+      font-size: 14px;
+    }
+  }
+  &__arrow {
+    display: none;
+    @include media(tablet) {
+      display: block;
+      fill: var(--main-text-color);
+    }
+    &:hover {
+      fill: var(--nav-hover-color);
+    }
+  }
 }
 
-.hero-info__icecreams {
-  display: none;
-  @include media(tablet) {
-    display: block;
-    z-index: 2;
+@keyframes plate-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
   }
 }
-.hero-info__text {
-  display: none;
-  @include media(tablet) {
-    display: block;
-    width: 139px;
-    margin-bottom: 12px;
-
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 140%;
+@keyframes ice-cream-shadow-spawn {
+  0% {
+    filter: drop-shadow(0 0 #fcfcfc);
   }
-  @include media(desktop) {
-    width: 200px;
-    font-size: 14px;
+  100% {
+    filter: drop-shadow(0 0 40px #fcfcfc);
   }
 }
-.hero-info__arrow {
-  display: none;
-  @include media(tablet) {
-    display: block;
-    fill: currentColor;
+@keyframes ice-cream-shadow-flash {
+  0% {
+    filter: drop-shadow(0 0 40px #fcfcfc);
+  }
+  100% {
+    filter: drop-shadow(0 0 10px #fcfcfc);
   }
 }

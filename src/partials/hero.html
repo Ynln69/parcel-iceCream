@@ -1,79 +1,70 @@
-<section class="hero container section" id="home">
-  <div class="hero__container">
-    <div class="hero__thumb">
-      <div class="hero-name__thumb">
-        <h1 class="hero__title">
-          ice cream made with <span class="hero__word">passion</span>
-        </h1>
-        <div class="hero__buttons">
-          <a href="#products" class="hero__link">
-            <button type="button" class="button hero__btn btn-transparent">
+<section class="hero section" id="home">
+  <div class="container container-bgc">
+    <div class="hero__container">
+      <div class="hero__thumb">
+        <div class="hero-name__thumb">
+          <h1 class="hero__title">
+            ice cream made with <span class="hero__word">passion</span>
+          </h1>
+          <div class="hero__buttons">
+            <a
+              href="#products"
+              class="hero__link button hero__btn btn-transparent"
+            >
               Products
-            </button>
-          </a>
-          <button type="button" class="hero__button">How it’s made?</button>
+            </a>
+            <a href="#about" class="hero__button">How it’s made?</a>
+          </div>
+        </div>
+        <div class="hero-count">
+          <ul class="hero-count__list">
+            <li class="hero-count__item">
+              <p class="hero-count__number">16</p>
+              <p class="hero-count__desc">cafes</p>
+            </li>
+            <li class="hero-count__item">
+              <p class="hero-count__number">23</p>
+              <p class="hero-count__desc">food trucks</p>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="hero-count__thumb">
-        <ul class="hero-count__list">
-          <li class="hero-count__item">
-            <p class="hero-count__number">16</p>
-            <p class="hero-count__desc">cafes</p>
-          </li>
-          <li class="hero-count__item">
-            <p class="hero-count__number">23</p>
-            <p class="hero-count__desc">food trucks</p>
-          </li>
-        </ul>
+      <div class="hero-info">
+        <img
+          srcset="
+            ./images/tablet/many-iceCream-t.png  768w,
+            ./images/many-iceCream.png          1200w
+          "
+          sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 100vw"
+          src="./images/tablet/many-iceCream-t.png"
+          alt="
+          multi-colored balls of ice cream on a plate"
+          class="hero-info__icecreams"
+        />
+        <div class="hero-info__text">
+          <p class="hero-info__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <a href="#products" class="hero-info__arrow">
+            <svg width="40" height="16">
+              <use href="./images/symbol-defs.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
       </div>
-    </div>
-    <div class="hero-info__container">
       <img
         srcset="
-          ./images/tablet/many-iceCream-t.png  768w,
-          ./images/many-iceCream.png          1200w
+          ./images/mobile/hero-iceCream-m.png     320w,
+          ./images/mobile/hero-iceCream-m480.png  480w,
+          ./images/tablet/hero-iceCream-t.png     768w,
+          ./images/hero-iceCream.png             1200w
         "
-        sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, 100vw"
-        src="./images/tablet/many-iceCream-t.png"
-        alt="
-        multi-colored balls of ice cream on a plate"
-        class="hero-info__icecreams"
+        sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, (min-width: 480px) 480px, (min-width: 320px) 320px, 100vw"
+        src="./images/hero-iceCream.png"
+        alt="ice cream with smile"
+        class="hero__picture"
       />
-      <div class="hero-info__text">
-        <p class="hero-info__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et
-        </p>
-        <svg class="hero-info__arrow" width="40" height="16">
-          <use href="./images/symbol-defs.svg#icon-arrow"></use>
-        </svg>
-      </div>
     </div>
-    <img
-      srcset="
-        ./images/mobile/hero-iceCream-m.png     320w,
-        ./images/mobile/hero-iceCream-m480.png  480w,
-        ./images/tablet/hero-iceCream-t.png     768w,
-        ./images/hero-iceCream.png             1200w
-      "
-      sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, (min-width: 480px) 480px, (min-width: 320px) 320px, 100vw"
-      src="./images/hero-iceCream.png"
-      alt="ice cream with smile"
-      class="hero__picture"
-    />
   </div>
-      <div>
-          <img
-            srcset="
-            ./images/mobile/point-m320.png     320w,
-            ./images/mobile/point-m.png  480w,
-            ./images/tablet/point-t.png     768w,
-            ./images/point.png             1200w"
-            sizes="(min-width: 1200px) 1200px, (min-width: 768px) 768px, (min-width: 480px) 480px, (min-width: 320px) 320px, 100vw"
-            class="hero__point"
-            src="./images/mobile/point-m.png"
-            alt="yellow dots"
-            />
-        </picture>
-      </div>
 </section>

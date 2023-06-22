@@ -5,19 +5,12 @@
   transform: translate(-50%);
   width: 100%;
   z-index: 10;
-  padding-top: 12px;
-  width: 100%;
-  @include media (mobile){
-    width: $container-width-mobile;
-    padding-top: 14px;
+  padding: 12px 0;
+  @include media(tablet) {
+    padding: 20px 0;
   }
-  @include media (tablet){
-    width: $container-width-tablet;
-    padding-top: 20px;
-  }
-  @include media (desktop){
-    width: $container-width-desktop;
-    padding-top: 8px;
+  @include media(desktop) {
+    padding: 18px 0;
   }
 
   &__container {
@@ -28,7 +21,7 @@
 
   &__svg {
     margin-right: auto;
-    @include media (desktop){
+    @include media(desktop) {
       margin-right: 0;
     }
   }
@@ -36,11 +29,11 @@
   &__logo {
     width: 40px;
     height: 37px;
-    @include media (mobile){
+    @include media(mobile) {
       width: 48px;
       height: 44px;
     }
-    @include media (desktop){
+    @include media(desktop) {
       width: 60px;
       height: 65px;
     }
@@ -49,13 +42,14 @@
     background-color: transparent;
     border: none;
     fill: var(--burger-menu-color);
-    @include media (tablet){
+    @include media(tablet) {
       margin-right: 32px;
     }
-    @include media (desktop){
+    @include media(desktop) {
       display: none;
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       fill: var(--nav-hover-color);
     }
   }
@@ -67,23 +61,23 @@
     padding-right: 36px;
     padding-left: 36px;
 
-    @include media (tablet){
+    @include media(tablet) {
       display: flex;
     }
   }
 }
 .header-scroll {
   box-shadow: 0 5.34219px 20.0332px rgb(10 136 23 / 25%);
-  background-image: linear-gradient(rgba(255,229,80,.737),rgba(156, 190, 143, 0.7));
-  
-  // var(--iceCream-imgBg-color);
-  
+  background-image: linear-gradient(
+    rgba(255, 229, 80, 0.737),
+    rgba(156, 190, 143, 0.7)
+  );
 }
 
 .nav__list {
   @extend %list;
   display: none;
-  @include media (desktop){
+  @include media(desktop) {
     opacity: 1;
     display: flex;
     gap: 28px;
@@ -93,9 +87,10 @@
   @extend %link;
   font-weight: 700;
   font-size: 16px;
-  line-height: calc(20/16);
+  line-height: calc(20 / 16);
 
-    &:hover, &:focus {
-      color: var(--nav-hover-color);
-    }
+  &:hover,
+  &:focus {
+    color: var(--nav-hover-color);
+  }
 }
