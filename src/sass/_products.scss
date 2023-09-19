@@ -1,22 +1,17 @@
 .products {
   padding-top: 60px;
   padding-bottom: 60px;
-  width: 100%;
   background-image: url(../images/mobile/background-m.png);
-  background-position: center;
+  background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: var(--main-text-color);
-  @include media(mobile) {
-    width: $container-width-mobile;
-  }
   @include media(tablet) {
     background-image: url(../images/tablet/background-t.png);
-    width: $container-width-tablet;
   }
   @include media(desktop) {
     background-image: url(../images/background.png);
-    width: $container-width-desktop;
+    padding-bottom: 66px;
   }
 
   &__subtitle {

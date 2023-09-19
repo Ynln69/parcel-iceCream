@@ -1,49 +1,66 @@
-<section class="review container">
-  <h2 class="visually-hidden">Customers review</h2>
-  <div class="slider">
-    <div class="slider__list">
-      <img
-        class="slider__avatar"
-        src="./images/emily-review.jpg"
-        alt="Emily with beautiful hair on a blue background"
-      />
-      <p class="slider__text">
-        <span class="slider__text-box"
-          >I love visiting your cafe. You prepare the most delicious ice cream
-          in Los Angeles! In addition, you have beautiful serving, cozy
-          atmosphere and polite staff.</span
-        >
-      </p>
-      <p class="slider__name">Emily, Los Angeles</p>
-    </div>
-    <div class="slider__list">
-      <img
-        class="slider__avatar"
-        src="./images/bryan-review.jpg"
-        alt="Brian is eating ice cream"
-      />
-      <p class="slider__text">
-        <span class="slider__text-box"
-          >Every day we come to you with friends after classes in college. We
-          love your ice cream and casual atmosphere!</span
-        >
-      </p>
-      <p class="slider__name">Bryan, New-York</p>
-    </div>
-    <div class="slider__list">
-      <img
-        class="slider__avatar"
-        src="./images/diana-review.jpg"
-        alt="Diana tastes coffee"
-      />
-      <p class="slider__text">
-        <span class="slider__text-box"
-          >Ice cream is my passion! I love your chocolate hazelnut ice cream!
-          And I really like the excellent service - always served politely and
-          quickly!</span
-        >
-      </p>
-      <p class="slider__name">Diana, Chicago</p>
+<section id="reviews" class="reviews">
+  <div class="container">
+    <h2 class="visually-hidden">Customer reviews</h2>
+    <div class="swiper">
+      <ul class="reviews__list swiper-wrapper">
+        <li class="reviews__item swiper-slide">
+          <div class="avatar-container">
+            <img
+              class="reviews__avatar"
+              src="./images/emily-review.jpg"
+              width="85"
+              alt="customer photo"
+            />
+          </div>
+          <p class="reviews__review">
+            I love visiting your cafe. You prepare the most delicious ice cream
+            in Los Angeles! In addition, you have beautiful serving, cozy
+            atmosphere and polite staff.
+          </p>
+          <p class="reviews__meta">Emily, Los Angeles</p>
+        </li>
+        <li class="reviews__item swiper-slide">
+          <div class="avatar-container">
+            <img
+              class="reviews__avatar"
+              src="./images/diana-review.jpg"
+              width="85"
+              alt="customer photo"
+            />
+          </div>
+          <p class="reviews__review">
+            Ice cream is my passion! I love your chocolate hazelnut ice cream!
+            And I really like the excellent service - always served politely and
+            quickly!
+          </p>
+          <p class="reviews__meta">Diana, Chicago</p>
+        </li>
+        <li class="reviews__item swiper-slide">
+          <div class="avatar-container">
+            <img
+              class="reviews__avatar"
+              src="./images/bryan-review.jpg"
+              width="85"
+              alt="customer photo"
+            />
+          </div>
+          <p class="reviews__review">
+            Every day we come to you with friends after classes in college. We
+            love your ice cream and casual atmosphere!
+          </p>
+          <p class="reviews__meta">Bryan, New-York</p>
+        </li>
+      </ul>
+      <ul class="reviews__pagination swiper-pagination">
+        <li><span aria-label="customer review 1"></span></li>
+        <li><span aria-label="customer review 2"></span></li>
+        <li><span aria-label="customer review 3"></span></li>
+      </ul>
+      <span
+        class="swiper-notification"
+        aria-live="assertive"
+        aria-atomic="true"
+      ></span>
     </div>
   </div>
 </section>

@@ -6,5 +6,5 @@ import './js/modal-video';
 import './js/modal-location';
 import './js/modal-franchise';
 import './js/slick';
-import './js/slick-gallery';
+import './js/swiper';
 import './js/anchor-scroll';

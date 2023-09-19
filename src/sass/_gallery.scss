@@ -1,60 +1,80 @@
-.gallery {
-  position: relative;
-  background-image: url(../images/mobile/background-m.png),
-    linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
+.gallery-reviews-bg {
+  background-color: #ffffff;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  min-height: 50px;
-  margin: 0 auto;
+  background-size: contain;
+  min-height: 1070.26px;
+  background-image: linear-gradient(
+      to bottom,
+      #84a178,
+      #84a178 24px,
+      transparent 24px
+    ),
+    url('../images/mobile/background-m.png');
+  background-size: contain;
 
   @include media(tablet) {
-    width: $container-width-tablet;
-    min-height: 327px;
-    background-image: url(../images/tablet/background-t.png),
-      linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
-    background-position: unset;
+    background-image: linear-gradient(
+        to bottom,
+        #84a178,
+        #84a178 164px,
+        transparent 164px
+      ),
+      url('../images/tablet/background-t.png');
+    background-size: cover;
+    min-height: 1122px;
   }
+
   @include media(desktop) {
-    width: $container-width-desktop;
-    min-height: 422px;
-    background-image: url(../images/background.png),
-      linear-gradient(to bottom, var(--main-bodyBg-color) 40%, transparent 0);
+    background-image: linear-gradient(
+        to bottom,
+        #84a178,
+        #84a178 95px,
+        transparent 95px
+      ),
+      url('../images/background.png');
+    background-size: cover;
+    min-height: 1110px;
   }
+}
+
+.gallery {
   &__list {
     @extend %list;
-  }
-  &__img {
-    position: absolute;
-    max-width: 280px;
-    border-radius: 24px;
-    max-height: 422px;
-    left: 50%;
-    top: 50%;
-    background-size: cover;
-    background-position: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    animation: imagesFading 6s infinite;
+    background-color: #fcfcfc;
+    border-radius: 7.5px;
+    position: relative;
+    overflow: hidden;
+
     @include media(tablet) {
-      max-width: 704px;
+      border-radius: 18px;
     }
     @include media(desktop) {
       max-width: 1013px;
+      border-radius: 24px;
+      margin: 0 auto;
     }
   }
+
+  &__item {
+    animation-name: gallery;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
 }
-.first-img {
-  animation-delay: 4s;
+.gallery__item:nth-child(n + 2) {
+  position: absolute;
+  top: 0;
+}
+.gallery__item:nth-child(2) {
+  animation-delay: 5s;
+}
+.gallery__item:first-child {
+  animation-delay: 10s;
 }
 
-.second-img {
-  animation-delay: 2s;
-}
-
-.third-img {
-  animation-delay: 0s;
-}
-@keyframes imagesFading {
+@keyframes gallery {
   0% {
     opacity: 1;
   }

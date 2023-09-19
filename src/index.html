@@ -22,14 +22,7 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    //
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./sass/main.scss" />
     <script type="module" src="./index.js"></script>
@@ -41,8 +34,10 @@
       <include src="./partials/products.html"></include>
       <include src="./partials/about.html"></include>
       <include src="./partials/advantages.html"></include>
-      <include src="./partials/gallery.html"></include>
-      <include src="./partials/customer-reviews.html"></include>
+      <div class="gallery-reviews-bg">
+        <include src="./partials/gallery.html"></include>
+        <include src="./partials/customer-reviews.html"></include>
+      </div>
       <include src="./partials/contacts.html"></include>
     </main>
     <include src="./partials/footer.html"></include>
@@ -76,4 +71,5 @@
   <script>
     AOS.init();
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </html>
