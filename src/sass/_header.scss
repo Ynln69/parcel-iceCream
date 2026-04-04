@@ -5,6 +5,7 @@
   transform: translate(-50%);
   width: 100%;
   z-index: 10;
+  transition: background-image 0.3s ease, box-shadow 0.3s ease;
   padding: 12px 0;
   @include media(tablet) {
     padding: 20px 0;
@@ -17,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: clamp(1rem, 3.036vw + 0.393rem, 3.125rem);
   }
 
   &__svg {
@@ -69,8 +71,8 @@
 .header-scroll {
   box-shadow: 0 5.34219px 20.0332px rgb(10 136 23 / 25%);
   background-image: linear-gradient(
-    rgba(255, 229, 80, 0.737),
-    rgba(156, 190, 143, 0.7)
+    rgba(255, 229, 80, 1),
+    rgba(156, 190, 143, 1)
   );
 }
 

@@ -1,8 +1,8 @@
 <!-- Modal products of iceCream -->
 <div class="backdrop is-hidden" data-icecream>
   <div class="modals modal-pro">
-    <button type="button" class="close-button-modal" data-icecream-close>
-      <svg width="20" height="20" class="modal-buy-now__svg">
+    <button type="button" class="close-button-modal" data-icecream-close aria-label="Close">
+      <svg width="20" height="20" class="modal-buy-now__svg" aria-hidden="true">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
@@ -62,25 +62,27 @@
       autocomplete="on"
       class="modal-buy-now__form form"
     >
-      <label for="name">
+      <label for="icecream-name">
         <input
-          id="name"
-          type="text "
+          id="icecream-name"
+          type="text"
           name="username"
           placeholder="Name"
           class="modal-buy-now__lable form__lable"
         />
       </label>
-      <label for="tell">
+      <label for="icecream-tell">
         <input
-          id="tell"
+          id="icecream-tell"
           type="tel"
           name="phone_number"
           placeholder="Phone"
           class="modal-buy-now__lable form__lable"
         />
       </label>
+      <label for="icecream-comment" class="visually-hidden">Comment</label>
       <textarea
+        id="icecream-comment"
         name="feedback"
         rows="3"
         placeholder="Comment"
@@ -99,12 +101,12 @@
 <!-- Modal procuct of coffe  -->
 <div class="backdrop is-hidden" data-icecoffee>
   <div class="modals modal-pro">
-    <button type="button" class="close-button-modal">
+    <button type="button" class="close-button-modal" data-icecoffee-close aria-label="Close">
       <svg
         width="20"
         height="20"
         class="modal-buy-now__svg"
-        data-icecoffee-close
+        aria-hidden="true"
       >
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
@@ -153,25 +155,27 @@
       autocomplete="on"
       class="modal-buy-now__form form"
     >
-      <label for="name">
+      <label for="coffee-name">
         <input
-          id="name"
-          type="text "
+          id="coffee-name"
+          type="text"
           name="username"
           placeholder="Name"
           class="modal-buy-now__lable form__lable"
         />
       </label>
-      <label for="tell">
+      <label for="coffee-tell">
         <input
-          id="tell"
+          id="coffee-tell"
           type="tel"
           name="phone_number"
           placeholder="Phone"
           class="modal-buy-now__lable form__lable"
         />
       </label>
+      <label for="coffee-comment" class="visually-hidden">Comment</label>
       <textarea
+        id="coffee-comment"
         name="feedback"
         rows="3"
         placeholder="Comment"
@@ -190,8 +194,8 @@
 <!-- Modal procuct of MilkShake  -->
 <div class="backdrop is-hidden" data-milk>
   <div class="modals modal-pro">
-    <button type="button" class="close-button-modal" data-milk-close>
-      <svg width="20" height="20" class="modal-buy-now__svg">
+    <button type="button" class="close-button-modal" data-milk-close aria-label="Close">
+      <svg width="20" height="20" class="modal-buy-now__svg" aria-hidden="true">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
@@ -247,25 +251,27 @@
       autocomplete="on"
       class="modal-buy-now__form form"
     >
-      <label for="name">
+      <label for="milk-name">
         <input
-          id="name"
-          type="text "
+          id="milk-name"
+          type="text"
           name="username"
           placeholder="Name"
           class="modal-buy-now__lable form__lable"
         />
       </label>
-      <label for="tell">
+      <label for="milk-tell">
         <input
-          id="tell"
+          id="milk-tell"
           type="tel"
           name="phone_number"
           placeholder="Phone"
           class="modal-buy-now__lable form__lable"
         />
       </label>
+      <label for="milk-comment" class="visually-hidden">Comment</label>
       <textarea
+        id="milk-comment"
         name="feedback"
         rows="3"
         placeholder="Comment"

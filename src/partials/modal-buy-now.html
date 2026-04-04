@@ -1,7 +1,7 @@
 <div class="backdrop is-hidden" data-modal-buy-now>
   <div class="modal-buy-now header-modal modals">
-    <button type="button" class="close-button-modal" data-modal-buy-now-close>
-      <svg width="20" height="20" class="modal-buy-now__svg">
+    <button type="button" class="close-button-modal" data-modal-buy-now-close aria-label="Close">
+      <svg width="20" height="20" class="modal-buy-now__svg" aria-hidden="true">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
@@ -28,7 +28,7 @@
       <label for="name">
         <input
           id="name"
-          type="text "
+          type="text"
           name="username"
           placeholder="Name"
           class="modal-buy-now__lable form__lable"
@@ -43,7 +43,9 @@
           class="modal-buy-now__lable form__lable"
         />
       </label>
+      <label for="buy-now-comment" class="visually-hidden">Comment</label>
       <textarea
+        id="buy-now-comment"
         name="feedback"
         rows="3"
         placeholder="Comment"

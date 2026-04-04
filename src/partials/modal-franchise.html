@@ -1,7 +1,7 @@
 <div class="backdrop is-hidden" data-franchise>
   <div class="modals modal-fran">
-    <button type="button" class="close-button-modal" data-franchise-close>
-      <svg width="20" height="20" class="modal-buy-now__svg">
+    <button type="button" class="close-button-modal" data-franchise-close aria-label="Close">
+      <svg width="20" height="20" class="modal-buy-now__svg" aria-hidden="true">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
@@ -19,7 +19,7 @@
       <label for="name">
         <input
           id="name"
-          type="text "
+          type="text"
           name="username"
           placeholder="Name"
           class="modal-fran__lable form__lable"
@@ -37,13 +37,15 @@
       <label for="email">
         <input
           id="email"
-          type="tel"
+          type="email"
           name="mail"
           placeholder="Email"
           class="modal-fran__lable form__lable"
         />
       </label>
+      <label for="fran-comment" class="visually-hidden">Comment</label>
       <textarea
+        id="fran-comment"
         name="feedback"
         rows="3"
         placeholder="Comment"

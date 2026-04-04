@@ -1,7 +1,7 @@
 <div class="backdrop is-hidden" data-location>
   <div class="modals modal-loc">
-    <button type="button" class="close-button-modal" data-location-close>
-      <svg width="20" height="20" class="modal-buy-now__svg">
+    <button type="button" class="close-button-modal" data-location-close aria-label="Close">
+      <svg width="20" height="20" class="modal-buy-now__svg" aria-hidden="true">
         <use href="./images/symbol-defs.svg#icon-close"></use>
       </svg>
     </button>
@@ -11,11 +11,10 @@
       sizes="(min-width: 768px) 768px, (min-width: 320px) 320px, 100vw"
       src="./images/mobile/map.jpg"
       alt="location in Poltava"
+      loading="lazy"
     />
-    <a href="https://goo.gl/maps/ccxzRgEhHywhJZb99" class="modal-loc__link">
-      <button class="button btn-color modal-loc__btn" type="button">
-        Open map
-      </button>
+    <a href="https://goo.gl/maps/ccxzRgEhHywhJZb99" class="modal-loc__link button btn-color modal-loc__btn" target="_blank" rel="noreferrer noopener">
+      Open map
     </a>
   </div>
 </div>
